@@ -44,6 +44,12 @@ class DetailController: UIViewController {
         txtView.isScrollEnabled = false
         txtView.isEditable = false
         categoryLabel.text = data?.category
+        galleryButton.titleLabel?.numberOfLines = 1
+        galleryButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        galleryButton.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        videosButton.titleLabel?.numberOfLines = 1
+        videosButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        videosButton.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
         
         url = data?.coverPhotoUrl
         guard let imageUrl = data?.coverPhotoUrl else {return}
